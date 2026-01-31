@@ -3,25 +3,42 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 interface CustomButtonProp {
 title:string;
 onClick: ()=>void
-
+variant? : "primary" | "secondary"
 }
 
-export default function CustomButton({title,onClick}:CustomButtonProp ){ 
+export default function CustomButton({title,onClick,variant = 'primary'}:CustomButtonProp ){ 
+   const styles = getStyles(variant)
  return (
-    <View>
-     <TouchableOpacity onPress={onClick} style ={style.container}>
-          <Text>{title}</Text>
+    <View style ={styles.container}>
+     <TouchableOpacity onPress={onClick} >
+          <Text style={styles.text}>{title}</Text>
         </TouchableOpacity>
       
     </View>
   );
 } ;
 
-const style = StyleSheet.create({
-  container : {
 
-    backgroundColor: "#ebd8e1"
 
-  }
 
-});
+
+const getStyles = (variant: 'primary' | 'secondary') =>
+  StyleSheet.create({
+    container: {
+      paddingVertical: 15,
+      alignItems: 'center',
+      width: "80%",
+      marginBottom: 12,
+      backgroundColor:
+        variant === "primary" ? "#2e4566" : "white",
+      borderRadius: 8,
+      borderWidth: 1,
+      borderColor: "#f3f4f6",
+    },
+    text: {
+      color:
+        variant === "primary" ? "white" : "black",
+      fontSize: 18,
+      fontWeight: "500"
+    }
+  });

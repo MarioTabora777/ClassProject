@@ -14,25 +14,53 @@ alert('Log In from app')
    const handleOnLogOut =() => {
 console.log('Log out ...') 
 alert('Log out from app')
-
-
   }
-  return (
-    <View style={styles.container}>
-      <Text>Hello world!</Text>
-      <StatusBar style="auto" />
-      <CustomButton title='Log In ...' onClick={handleOnLogin}></CustomButton> 
-      <CustomButton title='Log out ...' onClick={handleOnLogOut}></CustomButton>
+ return (
+  <View style={styles.container}> 
+    <View style={styles.card}>
+        <View style={styles.buttonsWrapper}>
+          <CustomButton title="Log In ..." onClick={handleOnLogin} />
+          <CustomButton
+            title="Log out ..."
+            onClick={handleOnLogOut}
+            variant="secondary"
+          />
+        </View>
+  </View>
 
-    </View>
-  );
+
+  </View>
+  
+);
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
   },
+   card: {
+      height: "80%" , 
+      width: "80%",
+      borderRadius: 15 , 
+      backgroundColor: "white"
+
+   },
+  buttonsWrapper: {
+    backgroundColor: 'pink', 
+    marginTop: 15 , 
+
+    alignItems: "center" , 
+    justifyContent: "space-around"
+
+  }
 });
+;
+
+
+
+
+
+
