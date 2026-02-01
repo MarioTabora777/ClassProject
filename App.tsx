@@ -6,25 +6,29 @@ import CustomButton from './source/components/CustomButton';
 
 //solo se puede retorar un componente,
 export default function App() {
-  const handleOnLogin =() => {
-console.log('Log In...')
-alert('Log In from app')
+  const handleOnLogin = () => {
+    console.log('Log In...')
+    alert('Log In from app')
+  }
+
+  const handleOnLogOut = () => {
+    console.log('Log out ...')
+    alert('This is a class project')
   } 
 
-   const handleOnLogOut =() => {
-console.log('Log out ...') 
-alert('Log out from app')
+
+    const handleOnInformation = () => {
+    console.log('Information button pressed ...')
+    alert('Log out from app')
   }
  return (
   <View style={styles.container}> 
     <View style={styles.card}>
         <View style={styles.buttonsWrapper}>
           <CustomButton title="Log In ..." onClick={handleOnLogin} />
-          <CustomButton
-            title="Log out ..."
-            onClick={handleOnLogOut}
-            variant="secondary"
-          />
+          <CustomButton  title="Log out ..."   onClick={handleOnLogOut} variant="secondary" /> 
+          <CustomButton  title="Information ..."   onClick={handleOnLogOut} variant="tertiary" />
+
         </View>
   </View>
 
