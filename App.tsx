@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import CustomButton from './source/components/CustomButton';
+import CustomInput from './source/components/CustomInput';
 
 
 
@@ -28,7 +29,7 @@ export default function App() {
           <CustomButton title="Log In ..." onClick={handleOnLogin} />
           <CustomButton  title="Log out ..."   onClick={handleOnLogOut} variant="secondary" /> 
           <CustomButton  title="Information ..."   onClick={handleOnLogOut} variant="tertiary" />
-
+          <CustomInput></CustomInput>
         </View>
   </View>
 
@@ -41,7 +42,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: '#ebf5f7',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
 
    },
   buttonsWrapper: {
-    backgroundColor: 'pink', 
+    backgroundColor: '#b6cacf', 
     marginTop: 15 , 
 
     alignItems: "center" , 

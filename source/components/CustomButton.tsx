@@ -3,7 +3,10 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 interface CustomButtonProp {
 title:string;
 onClick: ()=>void
-variant? : "primary" | "secondary" | "tertiary"
+variant? : "primary" | "secondary" | "tertiary" /*tipo literal*/
+
+
+
 }
 
 export default function CustomButton({title,onClick,variant = 'primary'}:CustomButtonProp ){ 
@@ -20,8 +23,6 @@ export default function CustomButton({title,onClick,variant = 'primary'}:CustomB
 
 
 
-
-
 const getStyles = (variant: "primary" | "secondary" | "tertiary") =>
   StyleSheet.create({
     container: {
@@ -30,7 +31,7 @@ const getStyles = (variant: "primary" | "secondary" | "tertiary") =>
       width: "80%",
       marginBottom: 12,
       backgroundColor:
-        variant === "primary" ? "#2e4566" : variant === "secondary" ? "white" : "gray",
+        variant === "primary" ? "#2e4566" : variant === "secondary" ? "white" : "gray", 
 
       borderRadius: 8,
       borderWidth: 1,
