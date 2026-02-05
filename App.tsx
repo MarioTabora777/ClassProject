@@ -29,7 +29,7 @@ export default function App() {
           <CustomButton title="Log In ..." onClick={handleOnLogin} />
           <CustomButton  title="Log out ..."   onClick={handleOnLogOut} variant="secondary" /> 
           <CustomButton  title="Information ..."   onClick={handleOnLogOut} variant="tertiary" />
-          <CustomInput></CustomInput>
+          <CustomInput placeholder='fdf' value = {''} onChange={() =>{}} typeInput={'password'}></CustomInput>
         </View>
   </View>
 
