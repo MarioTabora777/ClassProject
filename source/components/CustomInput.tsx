@@ -9,7 +9,7 @@ interface Props {
     placeholder:string;
     value: string, 
     onChange: ()=>void,
-    typeInput : 'password' | 'email' | 'numeric' | 'password' | 
+    typeInput : 'password' | 'email' | 'numeric' | 'password'  
     
 }
 
